@@ -557,6 +557,8 @@ export namespace MongoDriver {
     username: z.string(),
     password: z.string().role('secret'),
     database: z.string().required(),
+    authDatabase: z.string(),
+    uri: z.string(),
     writeConcern: z.object({
       w: z.union([
         z.const(undefined),
